@@ -17,5 +17,7 @@ for the epoch, using Operator rewards.
 ## TX HASH and LINK
 
 3ea6eddc0ff9ff54559a6d4cec4208268ccebbcea67e01a4f9397c47460824a3
-View on Cexplorer.io: [3ea6eddc0ff9ff54559a6d4cec4208268ccebbcea67e01a4f9397c47460824a3](https://cexplorer.io/tx/3ea6eddc0ff9ff54559a6d4cec4208268ccebbcea67e01a4f9397c47460824a3)
+
+View on Cexplorer.io: 
+[3ea6eddc0ff9ff54559a6d4cec4208268ccebbcea67e01a4f9397c47460824a3](https://cexplorer.io/tx/3ea6eddc0ff9ff54559a6d4cec4208268ccebbcea67e01a4f9397c47460824a3)
 
