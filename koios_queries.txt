@@ -1,0 +1,23 @@
+#######################################################
+# Get all stake keys delegated to RABIT
+#######################################################
+
+####### 1. build file for address queries (see below)
+
+curl -X GET "https://api.koios.rest/api/v0/pool_delegators?_pool_bech32=pool1n7s5kpymwd0zsld8q23tpf7z5esjaqwmnnzzssee5630zpx5ww0" \
+ -H "accept: application/json" | jq -r '.[].stake_address'
+
+
+####### 2. start building final database for reward calculations
+
+curl -X GET "https://api.koios.rest/api/v0/pool_delegators?_pool_bech32=pool1n7s5kpymwd0zsld8q23tpf7z5esjaqwmnnzzssee5630zpx5ww0&select=stake_address,amount" \
+-H "accept: text/csv"
+
+#######################################################
+# For each stake key, get one addy for payment
+#######################################################
+
+for i in $(cat stake_addys_by_stake); do curl -X POST "https://api.koios.rest/api/v0/account_addresses" \
+ -H "accept: text/csv"\
+ -H "content-type: application/json" \
+ -d $(jq -nc '{_stake_addresses: $ARGS.positional, _first_only: "yes", _empty: "yes"}' --args $i); done 
