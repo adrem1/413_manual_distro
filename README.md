@@ -6,7 +6,7 @@ Here delegates will able to see the koios queries (raw) and datasheet used to ma
 
 This decision was taken to mitigate the poor slot assignment for the epoch, using Operator rewards.
 
-Thank you to our delegates for their patience and continued support.
+**Thank you to our delegates for their patience and continued support**.
 
 ## NOTES
 
